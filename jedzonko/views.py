@@ -215,7 +215,7 @@ class AddPlan(View):
             }
             return render(request, "app-add-schedules.html", ctx)
         plan = Plan.objects.create(name=plan_name, description=plan_description)
-        return redirect(request, f"/plan/{plan.id}/")
+        return redirect(f"/plan/{plan.pk}/")
 
     
 class Contact(View):
